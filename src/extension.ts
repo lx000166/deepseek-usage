@@ -102,8 +102,8 @@ async function updateUsageDisplay() {
 		const todayKey = `startBalance_${new Date().toISOString().split('T')[0]}`;
 		let startBalance = extContext.globalState.get<number>(todayKey);
 
-		if (startBalance === undefined) {
-			// First refresh of the day: record current balance as baseline
+		if (startBalance === undefined || balance > startBalance) {
+			// First refresh of the day, or balance increased (e.g. top-up): reset baseline
 			startBalance = balance;
 			await extContext.globalState.update(todayKey, balance);
 

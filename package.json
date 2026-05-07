@@ -2,7 +2,7 @@
   "name": "deepseek-usage",
   "displayName": "DeepSeek Usage Monitor",
   "description": "Real-time DeepSeek API balance and daily usage monitor in VS Code status bar",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "license": "MIT",
   "engines": {
     "vscode": "^1.118.0"
